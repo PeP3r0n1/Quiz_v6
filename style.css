@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: rgb(224, 222, 186);
+}
+
+#pergunta {
+    margin-top: 40px;
+}
+
+.option {
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    width: 70px;
+    background-color: black;
+    border: 5px solid brown;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.2s;
+    color: aliceblue;
+}
+
+.option:hover {
+    background-color: rgb(108, 108, 108);
+    transform: scale(1.03);
+}
+
+#resultado {
+    margin-top: 40px;
+}
+
+.correta {
+    background-color: rgb(3, 153, 0);
+    color: aliceblue;
+}
+
+.errada {
+    background-color: rgb(181, 0, 0);
+    color: aliceblue;
+}
+
+#progresso {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#barra {
+    width: 250px;
+    height: 20px;
+    margin-top: 10px;
+}
