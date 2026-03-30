@@ -16,6 +16,10 @@ function mostraPergunta() {
         option.classList.remove("errada");
     });
     document.getElementById("pergunta").textContent = pergunta.texto;
+    document.getElementById("progresso").textContent = "Pergunta "+(perguntaAtual+1)+"de"+perguntas.length;
+
+        document.getElementById("barra").max = perguntas.length;
+        document.getElementById("barra").value = perguntaAtual+1;
 
     options.forEach((elemento,index) => {
         elemento.textContent = pergunta.opcoes[index];
@@ -45,8 +49,11 @@ function verificarResposta(respostaEscolhida) {
                mostraPergunta();
         }, 1000);
     } else {
-        document.getElementById("pergunta").textContent = "fim do quiz";
+        document.getElementById("pergunta").textContent = "Fim do quiz";
         document.getElementById("resultado").textContent = "Pontuação "+pontos+"/"+perguntas.length;
+
+            document.getElementById("progresso").textContent = "Finalizado";
+            document.getElementById("barra").value = perguntas.length;
     }
 }
 mostraPergunta();
